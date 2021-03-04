@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.4.3</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>Nanifarfalla.app</groupId>
+	<artifactId>Nanifarfalla</artifactId>
+	<version>0.0.9-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>demo</name>
+	<description>Inicio de Sesion del Sistema Naniafarfalla- Ventas Online</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<joffre.jackson.version>2.11.2</joffre.jackson.version>
+		<joffre.logstash.version>4.8</joffre.logstash.version>
+		<joffre.jspapi.version>2.2</joffre.jspapi.version>
+		<joffre.springsecurity.version>5.2.0.RELEASE
+		</joffre.springsecurity.version>
+		<joffre.geoip2.version>2.14.0</joffre.geoip2.version>
+		<joffre.uapjava.version>1.4.0</joffre.uapjava.version>
+		<joffre.guava.version>23.0</joffre.guava.version>
+		<joffre.hibernatevalidator.version>6.0.17.Final
+		</joffre.hibernatevalidator.version>
+		<joffre.hibernatecore.version>5.4.6.Final
+		</joffre.hibernatecore.version>
+		<joffre.datajpa.version>2.2.7.RELEASE</joffre.datajpa.version>
+		<joffre.gson.version>2.8.6</joffre.gson.version>
+		<joffre.richfaces.version>3.3.3.Final</joffre.richfaces.version>
+		<joffre.passay.version>1.0</joffre.passay.version>
+		<joffre.elapi.version>2.2</joffre.elapi.version>
+		<joffre.servletapi.version>4.0.1</joffre.servletapi.version>
+		<joffre.jstl.version>1.2</joffre.jstl.version>
+		<joffre.springwebmvc.version>5.2.8.RELEASE
+		</joffre.springwebmvc.version>
+		<joffre.aerogear.version>1.0.0</joffre.aerogear.version>
+		<joffre.junit.version>4.12</joffre.junit.version>
+		<joffre.mysql.version>5.1.48</joffre.mysql.version>
+		<java.version>1.8</java.version>
+	</properties>
+
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+
+
+		<!-- 2fa -->
+		<dependency>
+			<groupId>org.jboss.aerogear</groupId>
+			<artifactId>aerogear-otp-java</artifactId>
+			<version>${joffre.aerogear.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Servlet -->
+
+		<dependency>
+			<groupId>jstl</groupId><!--$NO-MVN-MAN-VER$ -->
+			<artifactId>jstl</artifactId>
+			<version>${joffre.jstl.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${joffre.servletapi.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${joffre.jackson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.el</groupId>
+			<artifactId>el-api</artifactId>
+			<version>${joffre.elapi.version}</version>
+		</dependency>
+
+		<!-- Password Validation -->
+		<dependency>
+			<groupId>org.passay</groupId>
+			<artifactId>passay</artifactId>
+			<version>${joffre.passay.version}</version>
+		</dependency>
+
+		
+		<!-- Gson dependencies -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>${joffre.gson.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
